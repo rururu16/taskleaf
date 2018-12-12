@@ -10,6 +10,10 @@ class Task < ApplicationRecord
     %w[name created_at]
   end
 
+  def self.ransackable_associations(auth_object = nil)
+    []
+  end
+
   private
 
   def validate_name_not_including_comma
